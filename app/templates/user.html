@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "macros.html" import render_input_form %}
+
+{% block content %}
+{{ render_input_form(username) }}
+<h1>
+  Data about
+  <a target="_blank" href="https://github.com/{{ username }}">{{ username }}</a>
+</h1>
+
+<ul>
+  {% for repo in repos %}
+  <li>
+    <a target="_blank" href="{{ repo.html_url }}">
+      {{ repo.name }}
+    </a>
+    {% if repo.fork == True %}
+      (forked)
+    {% endif %}
+
+    {% if repo.homepage %}
+      <a target="_blank" href="{{ repo.homepage }}">
+        Homepage
+      </a>
+    {% endif %}
+
+    <p>
+        Number of stars: {{ repo.stargazers_count }}
+    </p>
+
+    <p>
+      Written in {{ repo.language }}
+    </p>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

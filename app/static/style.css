@@ -1,0 +1,39 @@
+.container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 15px;
+}
+
+.search-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.button {
+  background: #6b886b;
+  padding: 12px 45px;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #558d55;
+}
+
+.input {
+  min-width: 400px;
+  text-align: left;
+  font-size: 20px;
+  padding: 10px 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.input:focus {
+  border: 2px solid #ddd;
+  outline: 0;
+}

@@ -1,0 +1,14 @@
+{% macro render_input_form(username) %}
+
+<form method="GET" class="search-container">
+  <input
+    type="text"
+    id="search"
+    class="input"
+    value="{{ username }}"
+    placeholder="Enter github username"
+  />
+  <input type="submit" id="search-link" formaction="/users/{{ username }}" class="button" value="Find" />
+</form>
+
+{% endmacro %}

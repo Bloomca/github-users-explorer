@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "macros.html" import render_input_form %}
+
+{% block content %}
+  <h1>
+    Not Found :(
+  </h1>
+  <p>
+    Sorry, user {{ username }} does not exist on GitHub. Please try other!
+  </p>
+  {{ render_input_form('') }}
+{% endblock %}
